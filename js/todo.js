@@ -15,11 +15,15 @@ function addList(item) {
     const li = document.createElement("li");
     const span = document.createElement("span");
     const button = document.createElement("button");
+    var i = document.createElement('input');
+    i.setAttribute("type", "checkbox");
     button.innerText = "X";
     button.addEventListener("click", deleteTodo);
     li.appendChild(span);
+    li.appendChild(i);
     li.appendChild(button);
-    span.innerText = item;
+    span.innerHTML = item; 
+    // li.innerHTML = <input type="checkbox" name="" id=""></input>
     list.appendChild(li);
     saveList();
 }
