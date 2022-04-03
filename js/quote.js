@@ -1,5 +1,5 @@
 const quote = ["에너지를 올바른 곳에", "더 이상의 치트는 없다", "물을 많이 마시자",
-    "일찍 자고 일찍 일어나자", "핸드폰을 자제하자"
+    "일찍 자고 일찍 일어나자", "핸드폰을 자제하자", "좀 더 즐기자"
 ];
 
 const quoteDisplay = document.querySelector(".quote")
