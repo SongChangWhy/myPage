@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div>
+    <div class="areaOne">
         <h2 class="clock"></h2>
         <form class="hidden">
             <input maxlength="10" required type="text" placeholder="what is your name?">
@@ -25,19 +25,36 @@
         </span>
         <button id=logout>logout</button>
     </div>
+
+    <div class="areaTwo">
+
+        <ul id="list"></ul>
+        <form id = doMore>
+            <input id="newTodo" required type="text" placeholder="what's next">
+            <input id="todoAdd" type="submit" value="add">
+        </form>
+
+    </div>
+
     <script src="js/greet.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quote.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+
 
 
 </body>
-
 <style>
     .hidden {
         display: none;
     }
 
+    ul {
+        list-style-type: none;
+        padding-left : 10px
+    }
+    ul li {border-bottom : 1px black solid ; margin-top: 3px; }
     .imagespace {
         width: 300px;
         height: 200px;
@@ -45,6 +62,23 @@
 
     #newQuote {
         width: 240px;
+    }
+
+    .areaOne {
+        display: table-cell;
+        padding-right: 10px;
+        border-color: black;
+        border-right: solid 1px
+    }
+
+    .areaTwo {
+        padding-left: 10px;
+    }
+
+    body {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
     }
 </style>
 
