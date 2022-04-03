@@ -19,17 +19,19 @@
         <h3 class="quote"></h3>
         <span class="imagespace"> <img name=backgroundImage src="" width="350" height="280px"> </span>
         <br>
-        <span>
-            <input id="newQuote" required type="text" placeholder="your quote">
-            <input id="quoteAdd" type="button" value="add">
-        </span>
-        <button id=logout>logout</button>
+        <form id="quotes">
+            <span>
+                <input id="newQuote" required type="text" placeholder="your quote">
+                <input id="quoteAdd" type="submit" value="add">
+            </span>
+            <button id=logout>logout</button>
+        </form>
     </div>
 
     <div class="areaTwo">
 
-        <ul id="list"></ul>
-        <form id = doMore>
+        <ol id="list"></ol>
+        <form id=doMore>
             <input id="newTodo" required type="text" placeholder="what's next">
             <input id="todoAdd" type="submit" value="add">
         </form>
@@ -41,7 +43,7 @@
     <script src="js/quote.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
-
+    <checkbox></checkbox>
 
 
 </body>
@@ -50,29 +52,32 @@
         display: none;
     }
 
-    ul {
+    ol {
         list-style-type: none;
-        padding-left : 10px
+        padding-left: 1px
     }
-    ul li {border-bottom : 1px black solid ; margin-top: 3px; }
+
+    ol li {
+        margin-top: 0px;
+        margin-bottom: 3px;
+    }
+
     .imagespace {
         width: 300px;
         height: 200px;
+    }
+
+    ol button {
+        margin-left: 5px;
     }
 
     #newQuote {
         width: 240px;
     }
 
-    .areaOne {
-        display: table-cell;
-        padding-right: 10px;
-        border-color: black;
-        border-right: solid 1px
-    }
-
-    .areaTwo {
-        padding-left: 10px;
+    #newTodo {
+        width: 240px;
+        height: 15px;
     }
 
     body {

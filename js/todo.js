@@ -15,11 +15,9 @@ function addList(item) {
     const li = document.createElement("li");
     const span = document.createElement("span");
     const button = document.createElement("button");
-    const checkbox = document.createElement("checkbox");
     button.innerText = "X";
     button.addEventListener("click", deleteTodo);
     li.appendChild(span);
-    li.appendChild(checkbox);
     li.appendChild(button);
     span.innerText = item;
     list.appendChild(li);
