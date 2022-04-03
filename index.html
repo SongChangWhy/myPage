@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2 class="clock"></h2>
+        <form class="hidden">
+            <input maxlength="10" required type="text" placeholder="what is your name?">
+            <input type="submit" value="log in">
+        </form>
+        <h1 class="hidden"></h1>
+        <h3 class="quote"></h3>
+        <span class="imagespace"> <img name=backgroundImage src="" width="350" height="280px"> </span>
+        <br>
+        <span>
+            <input id="newQuote" required type="text" placeholder="your quote">
+            <input id="quoteAdd" type="button" value="add">
+        </span>
+        <button id=logout>logout</button>
+    </div>
+    <script src="js/greet.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quote.js"></script>
+    <script src="js/background.js"></script>
+
+
+</body>
+
+<style>
+    .hidden {
+        display: none;
+    }
+
+    .imagespace {
+        width: 300px;
+        height: 200px;
+    }
+
+    #newQuote {
+        width: 240px;
+    }
+</style>
+
+</html>
