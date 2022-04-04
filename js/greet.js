@@ -1,6 +1,6 @@
 const text = document.querySelector("input");
 const form = document.querySelector("form")
-const hello = document.querySelector("h1");
+const hello = document.querySelector("h4");
 
 function submit(event) {
     event.preventDefault();
@@ -24,6 +24,7 @@ const logoutBtn = document.querySelector("#logout");
 
 function logout() {
     localStorage.removeItem("name");
+    localStorage.removeItem("list");
     window.location.reload();
 }
 logoutBtn.addEventListener("click",logout);

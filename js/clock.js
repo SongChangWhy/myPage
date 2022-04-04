@@ -1,4 +1,6 @@
-const timeDisplay = document.querySelector(".clock");
+const dayDisplay = document.querySelector(".day");
+const time = document.querySelector(".time");
+
 
 let year,month,day,hour,minute,second;
 
@@ -16,7 +18,9 @@ function showtime(){
     if(hour<10){hour = "0" + hour}
 
     
-    timeDisplay.innerHTML = `${year}.${month+1}.${day} | ${hour}:${minute}:${second}`;
+    dayDisplay.innerHTML = `${year}.${month+1}.${day}`;
+    time.innerHTML = `${hour}:${minute}:${second}`;
+
 }
 showtime();
 setInterval(showtime, 1000);

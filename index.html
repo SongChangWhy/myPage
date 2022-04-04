@@ -6,46 +6,105 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
 </head>
+
 <body>
-    <div class="areaOne">
-        <h2 class="clock"></h2>
-        <form class="hidden">
-            <input maxlength="10" required type="text" placeholder="what is your name?">
-            <input type="submit" value="log in">
-        </form>
-        <h1 class="hidden"></h1>
-        <h3 class="quote"></h3>
-        <span class="imagespace"> <img name=backgroundImage src="" width="350" height="280px"> </span>
-        <br>
-        <form id="quotes">
-            <span>
-                <input id="newQuote" required type="text" placeholder="your quote">
-                <input id="quoteAdd" type="submit" value="add">
-            </span>
-            <button id=logout>logout</button>
-        </form>
+
+    <form class="hidden">
+        <input class="login" maxlength="10" required type="text" placeholder="what is your name?">
+        <input type="submit" value="log in">
+    </form>
+    <h4 class="hidden"></h4>
+    <h3 class="quote"></h3>
+
+    <div class="display">
+        <div class="imagespace"> <img name=backgroundImage src="" width="350" height="220px">
+        </div>
+        <div class = "showTime">
+            <h5 class="clock time"></h5>
+            <h5 class="clock day"></h5>
+        <div>
     </div>
 
-    <div class="areaTwo">
 
-        <ol id="list"></ol>
-        <form id=doMore>
-            <input id="newTodo" required type="text" placeholder="what's next">
-            <input id="todoAdd" type="submit" value="add">
-        </form>
+            <form id="quotes">
+                <span>
+                    <input id="newQuote" required type="text" placeholder="your quote">
+                    <input id="quoteAdd" type="submit" value="add">
+                </span>
+                <button id=logout>logout</button>
+            </form>
 
-    </div>
+            <form id=doMore>
+                <input id="newTodo" required type="text" placeholder="what's next">
+                <input id="todoAdd" type="submit" value="add">
+            </form>
+            <ol id="list"></ol>
 
-    <script src="js/greet.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/quote.js"></script>
-    <script src="js/background.js"></script>
-    <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
+
+            <script src="js/greet.js"></script>
+            <script src="js/clock.js"></script>
+            <script src="js/quote.js"></script>
+            <script src="js/background.js"></script>
+            <script src="js/todo.js"></script>
 </body>
 <style>
+    * {
+        margin: 0px;
+    }
+
+    .display {
+        position: relative;
+    }
+
+    .imagespace {
+        width: 300px;
+        height: 200px;
+    }
+    .showTime{position: ab;}
+    .day {
+        position: absolute;
+        top: 70%;
+        left: 2%;
+        color: white;
+        font-size: 25px;
+        
+    }
+
+    .time {
+        position: absolute;
+        top: 54%;
+        left: 1%;
+        color: white;
+        font-size: 40px;
+    }
+
+    .login {
+        margin-left: 90px;
+    }
+
+    h4 {
+        text-align: center;
+        font-size: 35px;
+        background: linear-gradient(to right, #96a2d1 20%, #b41dc8 40%, #0b2eb9 60%, #df8e98);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0px;
+    }
+
+    h3 {
+        text-align: center;
+        font-weight: 550;
+        margin: 0px;
+        margin-top: 5px;
+        font-size: 18px;
+    }
+
+    body {
+        height: 100vh;
+    }
+
     .hidden {
         display: none;
     }
@@ -60,10 +119,6 @@
         margin-bottom: 3px;
     }
 
-    .imagespace {
-        width: 300px;
-        height: 200px;
-    }
 
     ol button {
         margin-left: 5px;
@@ -71,6 +126,10 @@
 
     #newQuote {
         width: 240px;
+    }
+
+    #quotes {
+        margin-top: 20px;
     }
 
     #newTodo {

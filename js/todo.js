@@ -23,7 +23,6 @@ function addList(item) {
     li.appendChild(i);
     li.appendChild(button);
     span.innerHTML = item; 
-    // li.innerHTML = <input type="checkbox" name="" id=""></input>
     list.appendChild(li);
     saveList();
 }
