@@ -14,7 +14,7 @@ setInterval(randomQuote, 30000);
 randomQuote();
 
 function addQuote(event) {
-    event.preventDefault();
+    
     let newQuote = document.getElementById("newQuote")
     quote.push(newQuote.value);
     newQuote.value = "";

@@ -11,47 +11,75 @@
 
 <body>
 
-    <form class="hidden">
-        <input class="login" maxlength="10" required type="text" placeholder="what is your name?">
-        <input type="submit" value="log in">
-    </form>
-    <h4 class="hidden"></h4>
-    <h3 class="quote"></h3>
-
     <div class="display">
-        <div class="imagespace"> <img name=backgroundImage src="" width="350" height="220px">
+        <div class="logIN">
+            <form class="hidden">
+                <input class="login" maxlength="6" required type="text" placeholder="what is your name?">
+                <input type="submit" value="log in">
+            </form>
         </div>
-        <div class = "showTime">
-            <h5 class="clock time"></h5>
-            <h5 class="clock day"></h5>
-        <div>
+        <h4 class="hidden, Hello"></h4>
+        <h3 class="quote"></h3>
+        <div class="imagespace"> <img name=backgroundImage src="" width="310" height="220px"></div>
+
+        <h5 class="clock time"></h5>
+        <h5 class="clock day"></h5>
+        <button id="logout" class="hidden">logout</button>
+
+    </div>
+    <div areaTw0>
+
+        <form id="quotes">
+            <input id="newQuote" required type="text" placeholder="your quote">
+            <input id="quoteAdd" type="submit" value="add">
+        </form>
+        <form id=doMore>
+            <input id="newTodo" required type="text" placeholder="what's next">
+            <input id="todoAdd" type="submit" value="add">
+        </form>
+        <ol id="list"></ol>
     </div>
 
-
-            <form id="quotes">
-                <span>
-                    <input id="newQuote" required type="text" placeholder="your quote">
-                    <input id="quoteAdd" type="submit" value="add">
-                </span>
-                <button id=logout>logout</button>
-            </form>
-
-            <form id=doMore>
-                <input id="newTodo" required type="text" placeholder="what's next">
-                <input id="todoAdd" type="submit" value="add">
-            </form>
-            <ol id="list"></ol>
-
-
-            <script src="js/greet.js"></script>
-            <script src="js/clock.js"></script>
-            <script src="js/quote.js"></script>
-            <script src="js/background.js"></script>
-            <script src="js/todo.js"></script>
+    <script src="js/greet.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quote.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
 </body>
 <style>
     * {
         margin: 0px;
+    }
+
+    .logIN {
+        position: absolute;
+        top: 50%;
+        left: 14%;
+    }
+
+    .Hello {
+        position: absolute;
+        top: 1%;
+        left: 3%
+    }
+
+    #logout {
+        position: absolute;
+        left:85%;
+        top:98%;
+    }
+
+    .Done {
+        text-decoration: line-through;
+    }
+
+    .quote {
+        color: white;
+        font-style: italic;
+        font-size: 14px;
+        position: absolute;
+        top: 27%;
+        left: 3%
     }
 
     .display {
@@ -62,32 +90,31 @@
         width: 300px;
         height: 200px;
     }
-    .showTime{position: ab;}
-    .day {
-        position: absolute;
-        top: 70%;
-        left: 2%;
-        color: white;
-        font-size: 25px;
-        
-    }
 
     .time {
         position: absolute;
-        top: 54%;
+        top: 71%;
         left: 1%;
         color: white;
         font-size: 40px;
     }
 
+    .day {
+        position: absolute;
+        top: 92%;
+        left: 2%;
+        color: white;
+        font-size: 25px;
+    }
+
     .login {
-        margin-left: 90px;
+        margin-left: 0px;
     }
 
     h4 {
         text-align: center;
-        font-size: 35px;
-        background: linear-gradient(to right, #96a2d1 20%, #b41dc8 40%, #0b2eb9 60%, #df8e98);
+        font-size: 32px;
+        background: linear-gradient(to right, #e8ebf5 20%, #7f7d80 40%, #ccd0e3 60%, #efe3e4);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin: 0px;
@@ -124,16 +151,16 @@
         margin-left: 5px;
     }
 
-    #newQuote {
-        width: 240px;
-    }
-
     #quotes {
         margin-top: 20px;
     }
 
+    #newQuote {
+        width: 200px;
+    }
+
     #newTodo {
-        width: 240px;
+        width: 200px;
         height: 15px;
     }
 
