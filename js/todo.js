@@ -8,6 +8,7 @@ function todoAdd(event) {
     let todo = document.getElementById("newTodo")
     todoList.push(todo.value);
     addList(todo.value);
+    todo.value ="";
 }
 
 function addList(item) {
