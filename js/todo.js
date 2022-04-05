@@ -8,7 +8,6 @@ function todoAdd(event) {
     let todo = document.getElementById("newTodo")
     todoList.push(todo.value);
     addList(todo.value);
-    todo.value = "";
 }
 
 function addList(item) {
@@ -60,5 +59,5 @@ function deleteTodo(event) {
     let item = (li.innerText.slice(0, -1));
     li.remove();
     todoList = todoList.filter((e) => e != item);
-    localStorage.setItem("list", JSON.stringify(todoList));
+    saveList();
 }
